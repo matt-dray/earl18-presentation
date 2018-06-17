@@ -1,14 +1,14 @@
 ---
-title: "Crosstalk"
-subtitle: "Shiny-like without Shiny?"
-author: "Matt Dray, Department for Education"
+title: "Crosstalk\nShiny-like without Shiny?"
+subtitle: "Matt Dray"
+author: "Department for Education"
 date: "12 September 2018"
-output: ioslides_presentation
+output:
+  revealjs::revealjs_presentation:
+    theme:  white
+    highlight: tango
+    center: true
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 ## TL;DR
 
@@ -45,10 +45,11 @@ Too long; didn't read.
 ## Contact
 
 Matt Dray
+<br>
 <matthew.dray@education.gov.uk>
 
 Personal: 
 
-* [rostrum.blog](https://www.rostrum.blog/)
-* [twitter.com/mattdray](https://twitter.com/mattdray)
-* [github.com/matt-dray](https://github.com/matt-dray)
+[rostrum.blog](https://www.rostrum.blog/)
+[twitter.com/mattdray](https://twitter.com/mattdray)
+[github.com/matt-dray](https://github.com/matt-dray)
