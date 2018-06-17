@@ -1,8 +1,8 @@
 ---
 title: "Crosstalk"
 subtitle: "Shiny-like without Shiny?"
-author: "Matt Dray"
-date: "13 June 2018"
+author: "Matt Dray, Department for Education"
+date: "12 September 2018"
 output: ioslides_presentation
 ---
 
@@ -10,27 +10,45 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+## TL;DR
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Too long; didn't read.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+## The problem
 
-## Slide with Bullets
+Create a map.
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+## Solution 0
 
-## Slide with R Output
+Get someone with an ArcGIS license to create a static map.
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
+## Solution 1
 
-## Slide with Plot
+Leaflet interactive map
 
-```{r pressure}
-plot(pressure)
-```
+## Solution 2
 
+Leaflet interactive map in a Flexdashboard
+
+## Solution 3
+
+Leaflet interactive map in a Flexdashboard with a Datatable
+
+## Solution 4
+
+Leaflet interactive map in a Flexdashboard with a Datatable and Crosstalk
+
+## TL;DR
+
+Too long; didn't read.
+
+## Contact
+
+Matt Dray
+<matthew.dray@education.gov.uk>
+
+Personal: 
+
+* [rostrum.blog](https://www.rostrum.blog/)
+* [twitter.com/mattdray](https://twitter.com/mattdray)
+* [github.com/matt-dray](https://github.com/matt-dray)
