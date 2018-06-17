@@ -2,9 +2,9 @@
 
 ## Summary
 
-This repo contains slides for a presentation I gave at the (EARL (Enterprise Applications of the R Language) conference)[https://earlconf.com/2018/london/#speakers] in London on 12 September 2018.
+This repo contains slides for a presentation I gave at the [EARL (Enterprise Applications of the R Language) conference](https://earlconf.com/2018/london/) in London on 12 September 2018.
 
-The presentation was about use of (the `crosstalk` package)[http://rstudio.github.io/crosstalk/] to help solve a business problem.
+The presentation was about use of [the `crosstalk` package](http://rstudio.github.io/crosstalk/) to help solve a business problem.
 
 Note that this talk was restricted to **published data only** and the content of this talk **does not reflect or constitute official government policy**.
 
