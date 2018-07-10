@@ -1,55 +1,78 @@
 ---
-title: "Crosstalk\nShiny-like without Shiny?"
-subtitle: "Matt Dray"
-author: "Department for Education"
-date: "12 September 2018"
+title: "Crosstalk"
+subtitle: "Shiny-like without Shiny?"
+author: "Matt Dray | Dept for Education | EARL 2018"
 output:
-  revealjs::revealjs_presentation:
-    theme:  white
-    highlight: tango
-    center: true
+  xaringan::moon_reader:
+    css: [default, rladies-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
 ---
 
-## TL;DR
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
 
-Too long; didn't read.
+class: center, middle
 
-## The problem
+# The problem
 
-Create a map.
+Create a map to help a non-technical audience make a decision.
 
-## Solution 0
+---
+class: center, middle
+
+# Solution 0
 
 Get someone with an ArcGIS license to create a static map.
 
-## Solution 1
+---
 
-Leaflet interactive map
+class: center, middle
 
-## Solution 2
+# Solution 1
 
-Leaflet interactive map in a Flexdashboard
+Leaflet interactive map.
 
-## Solution 3
+---
+class: center, middle
 
-Leaflet interactive map in a Flexdashboard with a Datatable
+# Solution 2
 
-## Solution 4
+Leaflet interactive map in a flexdashboard
+
+---
+class: center, middle
+
+# Solution 3
+
+Leaflet interactive map in a Flexdashboard with a Datatable.
+
+---
+class: center, middle
+
+# Solution 4
 
 Leaflet interactive map in a Flexdashboard with a Datatable and Crosstalk
 
-## TL;DR
+---
+class: center, middle
 
-Too long; didn't read.
+# TL;DR
 
-## Contact
+Leaflet interactive map in a Flexdashboard with a Datatable and Crosstalk
+
+
+---
+class: inverse, center, middle
+
+# Contact
 
 Matt Dray
-<br>
-<matthew.dray@education.gov.uk>
 
-Personal: 
+matthew.dray@education.gov.uk
 
-[rostrum.blog](https://www.rostrum.blog/)
-[twitter.com/mattdray](https://twitter.com/mattdray)
-[github.com/matt-dray](https://github.com/matt-dray)
+rostrum.blog | twitter.com/mattdray | github.com/matt-dray
