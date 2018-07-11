@@ -31,7 +31,6 @@ Get someone with an ArcGIS license to create a static map.
 
 ---
 
-
 # Solution 0
 
 ## +
@@ -55,8 +54,6 @@ class: inverse, center, middle
 `leaflet` interactive map
 
 ---
-
-class: center, middle
 
 # Solution 1
 
@@ -82,7 +79,6 @@ in a `flexdashboard`
 
 ---
 
-
 # Solution 2
 
 ## +
@@ -105,8 +101,6 @@ in a `flexdashboard`
 with a `datatable`.
 
 ---
-
-class: center, middle
 
 # Solution 3
 
@@ -132,8 +126,6 @@ with a `datatable`
 and linked with `crosstalk`
 
 ---
-
-class: center, middle
 
 # Solution 4
 
@@ -162,6 +154,6 @@ class: inverse, center, middle
 
 Matt Dray
 
-matthew.dray@education.gov.uk
+[matthew.dray@education.gov.uk](mailto:matthew.dray@education.gov.uk)
 
 [rostrum.blog](https://rostrum.blog) | [twitter.com/mattdray](https://www.twitter.com/mattdray) | [github.com/matt-dray](https://www.github.com/matt-dray)
