@@ -22,6 +22,14 @@ class: center, middle, inverse, title-slide
 
 class: center, middle
 
+# TL;DR
+
+Insert TL;DR.
+
+---
+
+class: center, middle
+
 # The problem
 
 Visualise and explore school locations to help make a policy decision.
@@ -31,23 +39,30 @@ class: inverse, center, middle
 
 # Solution 0
 
-Get someone with an ArcGIS license to create a static map.
+GIS software
 
 ---
 
 # Solution 0
 
+.pull-left[
 ## +
 
-* GIS is the 'proper way'
-* Image files are easy to share
-* Delegate to someone else!
+* Powerful
+* Output easy to share
+]
+--
+.pull-right[
+## &amp;ndash;
 
-## -
-
-* Limited licenses
+* Limited licenses for ArcGIS
+* Admin rights needed for QGIS
+* Click... click... click...
 * No interactivity
-* Backlog
+* Ping-pong feature requests
+* Limited knowledge in the department
+* Already a backlog
+]
 
 ---
 
@@ -61,17 +76,23 @@ class: inverse, center, middle
 
 # Solution 1
 
+.pull-left[
 ## +
 
-* Interactivity!
-* Relatively simple to code
+* Interactivity (pan, zoom, layers, etc)
+* Relatively simple code
+* Powerful functions
 * Share as HTML file
-
-## -
+* Run in-browser
+]
+--
+.pull-right[
+## &amp;ndash;
 
 * Need separate documentation
-* Need separate tabular data
-* Interactivity limted by widget availability 
+* Need separate tabular data file
+* Rendered in browser
+]
 
 ---
 class: inverse, center, middle
@@ -79,21 +100,24 @@ class: inverse, center, middle
 # Solution 2
 
 `leaflet` interactive map
-in a `flexdashboard`
+&lt;p&gt;in a `flexdashboard`
 
 ---
 
 # Solution 2
 
+.pull-left[
 ## +
 
 * Documentation alongside map
 * More user friendly
-
-## -
+]
+--
+.pull-right[
+## &amp;ndash;
 
 * Can't display tabular data alongside
-
+]
 
 ---
 class: inverse, center, middle
@@ -101,23 +125,25 @@ class: inverse, center, middle
 # Solution 3
 
 `leaflet` interactive map
-in a `flexdashboard`
-with a `datatable`.
+&lt;p&gt;in a `flexdashboard`
+&lt;p&gt;with a `datatable`
 
 ---
 
 # Solution 3
-
+.pull-left[
 ## +
 
 * Documentation alongside map
 * Tabular data alongside map
 * Users can download the data
-
-## -
+]
+--
+.pull-right[
+## &amp;ndash;
 
 * Map and tabular data aren't linked
-
+]
 
 ---
 class: inverse, center, middle
@@ -125,14 +151,15 @@ class: inverse, center, middle
 # Solution 4
 
 `leaflet` interactive map
-in a `flexdashboard`
-with a `datatable`
-and linked with `crosstalk`
+&lt;p&gt;in a `flexdashboard`
+&lt;p&gt;with a `datatable`
+&lt;p&gt;and linked with `crosstalk`
 
 ---
 
 # Solution 4
 
+.pull-left[
 ## +
 
 * Documentation alongside map
@@ -140,9 +167,12 @@ and linked with `crosstalk`
 * Users can download the data
 * Can add filter elements
 * Data link between `htmlwidgets
-
-## -
-
+]
+--
+.pull-right[
+## &amp;ndash;
+insert something
+]
 
 ---
 class: center, middle
