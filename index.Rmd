@@ -4,7 +4,6 @@ subtitle: "Shiny-like without Shiny?"
 author: "Matt Dray | Dept for Education | EARL 2018"
 output:
   xaringan::moon_reader:
-    css: ["default", "rladies-fonts"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -15,6 +14,7 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
+
 
 class: center, middle
 background-image: url(img/earl_logo_dark.png)
@@ -43,6 +43,10 @@ visualise school location data to help make a policy decision
 --
 
 with little infrastructure
+
+--
+
+at low cost
 
 --
 
@@ -267,6 +271,30 @@ filtering
 ?
 
 ]
+
+---
+class: inverse, center, middle
+
+# What's Crosstalk?
+
+---
+
+# Shared data
+
+```{r eval=FALSE}
+data <- readRDS("data/data.RDS")
+sd <- SharedData$new(my_data)  #<<
+```
+--
+```{r eval=FALSE}
+datatable(sd) #<<
+```
+--
+```{r eval=FALSE}
+leaflet(sd) %>%  #<<
+  addTiles() %>% 
+  addMarkers()
+```
 
 ---
 class: center, middle

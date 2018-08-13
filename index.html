@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Matt Dray | Dept for Education | EARL 2018" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -16,6 +16,7 @@ class: center, middle, inverse, title-slide
 ### Matt Dray | Dept for Education | EARL 2018
 
 ---
+
 
 
 
@@ -47,6 +48,10 @@ visualise school location data to help make a policy decision
 --
 
 with little infrastructure
+
+--
+
+at low cost
 
 --
 
@@ -271,6 +276,33 @@ filtering
 ?
 
 ]
+
+---
+class: inverse, center, middle
+
+# What's Crosstalk?
+
+---
+
+# Shared data
+
+
+```r
+data &lt;- readRDS("data/data.RDS")
+*sd &lt;- SharedData$new(my_data)
+```
+--
+
+```r
+*datatable(sd)
+```
+--
+
+```r
+*leaflet(sd) %&gt;%
+  addTiles() %&gt;% 
+  addMarkers()
+```
 
 ---
 class: center, middle
