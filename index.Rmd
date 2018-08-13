@@ -17,6 +17,13 @@ options(htmltools.dir.version = FALSE)
 ```
 
 class: center, middle
+background-image: url(img/earl_logo_dark.png)
+background-size: contain
+
+
+---
+
+class: center, middle
 
 # TL;DR
 
@@ -29,9 +36,15 @@ class: center, middle
 
 # The problem
 
+--
+
 visualise school location data to help make a policy decision
 
+--
+
 with little infrastructure
+
+--
 
 at short notice
 
@@ -91,6 +104,12 @@ class: inverse, center, middle
 
 ---
 
+class: center, middle
+background-image: url(img/solution1.PNG)
+background-size: contain
+
+---
+
 # Solution 1
 
 .pull-left[
@@ -131,6 +150,12 @@ class: inverse, center, middle
 
 ---
 
+class: center, middle
+background-image: url(img/solution2.PNG)
+background-size: contain
+
+---
+
 # Solution 2
 
 .pull-left[
@@ -152,7 +177,6 @@ self-service
 ## &cross;
 
 
-
 ]
 
 ---
@@ -163,6 +187,12 @@ class: inverse, center, middle
 `leaflet` interactive map
 <p>in a `flexdashboard`
 <p>with a `datatable`
+
+---
+
+class: center, middle
+background-image: url(img/solution3.PNG)
+background-size: contain
 
 ---
 
@@ -199,6 +229,18 @@ class: inverse, center, middle
 <p>in a `flexdashboard`
 <p>with a `datatable`
 <p>and linked with `crosstalk`
+
+---
+
+class: center, middle
+background-image: url(img/solution4-1.PNG)
+background-size: contain
+
+---
+
+class: center, middle
+background-image: url(img/solution4-2.PNG)
+background-size: contain
 
 ---
 
