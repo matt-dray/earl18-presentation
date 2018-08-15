@@ -4,6 +4,7 @@ subtitle: "Shiny-like without Shiny?"
 author: "Matt Dray | Dept for Education | EARL 2018"
 output:
   xaringan::moon_reader:
+    css: ["style/style.css", "style/style-fonts.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -321,7 +322,7 @@ class: inverse, center, middle
 
 ---
 
-# Shared data
+# Create *shared data*
 
 ```{r eval=FALSE}
 data <- readRDS("data/data.RDS")
