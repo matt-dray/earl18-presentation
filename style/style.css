@@ -46,6 +46,9 @@ a, a > code {
 img, video, iframe {
   max-width: 100%;
 }
+.image-100 img {
+  width: 100%;
+}
 blockquote {
   border-left: solid 5px lightgray;
   padding-left: 1em;
