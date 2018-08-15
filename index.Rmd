@@ -28,71 +28,19 @@ class: center, middle
 
 # The ask
 
---
-
-visualise school locations to help make a decision
+visualise school locations to help make a policy decision
 
 --
 
-with little infrastructure
+quickly
 
 --
 
-at low cost
+cheaply
 
 --
 
-at short notice
-
---
-
-and it has to be shareable
-
----
-
-class: inverse, center, middle
-
-# Solution 0
-
-GIS software
-
----
-
-# Solution 0
-
-.pull-left[
-
-## &check;
-
-typical
-
-powerful
-
-shareable output
-
-]
-
---
-
-.pull-right[
-
-## &cross;
-
-$$$
-
-admin rights
-
-click click click
-
-static
-
-ping-pong feature requests
-
-limited skill transferability
-
-already a backlog
-
-]
+shareable
 
 ---
 
@@ -100,9 +48,7 @@ class: inverse, center, middle
 
 # Solution 1
 
-`leaflet` interactive map
-
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.html)
+[`leaflet`](https://rstudio.github.io/leaflet/) interactive map
 
 ---
 
@@ -110,11 +56,15 @@ class: center, middle
 
 .image-100[![](img/solution1-1.PNG)]
 
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.html)
+
 ---
 
 class: center, middle
 
 .image-100[![](img/solution1-2.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.html)
 
 ---
 
@@ -153,16 +103,17 @@ class: inverse, center, middle
 
 # Solution 2
 
-`leaflet` interactive map
-<p>in a `flexdashboard`
+[`leaflet`](https://rstudio.github.io/leaflet/) interactive map
 
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/02_leaflet-flexdash.html)
+in a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/)
 
 ---
 
 class: center, middle
 
 .image-100[![](img/solution2.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/02_leaflet-flexdash.html)
 
 ---
 
@@ -193,22 +144,28 @@ class: inverse, center, middle
 
 # Solution 3
 
-`leaflet` interactive map
-<p>in a `flexdashboard`
-<p>with a `datatable`
+[`leaflet`](https://rstudio.github.io/leaflet/) interactive map
 
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-flexdash-dt.html)
+in a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/)
+
+with a [`DT`](https://rstudio.github.io/DT/) interactive table
+
+
 ---
 
 class: center, middle
 
 .image-100[![](img/solution3-1.PNG)]
 
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-flexdash-dt.html)
+
 ---
 
 class: center, middle
 
 .image-100[![](img/solution3-2.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-flexdash-dt.html)
 
 ---
 
@@ -241,12 +198,13 @@ class: inverse, center, middle
 
 # Solution 4
 
-`leaflet` interactive map
-<p>in a `flexdashboard`
-<p>with a `datatable`
-<p>and linked with `crosstalk`
+[`leaflet`](https://rstudio.github.io/leaflet/) interactive map
 
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+in a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/)
+
+with a [`DT`](https://rstudio.github.io/DT/) interactive table
+
+linked with [`crosstalk`](https://rstudio.github.io/crosstalk/)
 
 ---
 
@@ -254,11 +212,15 @@ class: center, middle
 
 .image-100[![](img/solution4-1.PNG)]
 
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
 ---
 
 class: center, middle
 
 .image-100[![](img/solution4-2.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
 
 ---
 
@@ -266,11 +228,15 @@ class: center, middle
 
 .image-100[![](img/solution4-3.PNG)]
 
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
 ---
 
 class: center, middle
 
 .image-100[![](img/solution4-4.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
 
 ---
 
@@ -278,11 +244,7 @@ class: center, middle
 
 .image-100[![](img/solution4-5.PNG)]
 
----
-
-class: center, middle
-
-.image-100[![](img/solution4-6.PNG)]
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
 
 ---
 
@@ -311,28 +273,87 @@ filtering
 ]
 
 ---
+
 class: inverse, center, middle
 
 # What's Crosstalk?
 
 ---
 
-# Create *shared data*
+class: center, middle
+
+> static html documents that do not require Shiny or any kind of server support and yet they can have interactivty between widgets 
+
+Make your widgets friends with each other!
+
+---
+
+# A small code change
+
+#### Before
 
 ```{r eval=FALSE}
-data <- readRDS("data/data.RDS")
-sd <- SharedData$new(my_data)  #<<
+data <- readRDS("data/some_data.RDS")
+
+datatable(data)
+
+leaflet(data) %>%  addTiles() %>% addMarkers()
 ```
+
 --
+
+#### After
+
 ```{r eval=FALSE}
-datatable(sd) #<<
+data <- readRDS("data/some_data.RDS")
+
+shared <- SharedData$new(data)  #<<
+
+datatable(shared)
+
+leaflet(shared) %>% addTiles() %>% addMarkers()
 ```
---
-```{r eval=FALSE}
-leaflet(sd) %>%  #<<
-  addTiles() %>% 
-  addMarkers()
-```
+
+---
+
+# Limitations
+
+1. Authors must modify HTML widgets
+
+2. Aggregate and summary views not yet available 
+
+3. Crosstalk is not appropriate for large data sets
+
+???
+
+1. There is guidance for the tweak. 
+2. Right now only linked brushing and filtering of views that show individual data points, not aggregate or summary views.
+3. Depenedent on browser limitations.
+
+
+---
+
+# Resources
+
+.pull-left[
+
+Talk at [rstudio::conf 2017](https://www.rstudio.com/resources/videos/linking-html-widgets-with-crosstalk/)
+
+[Documentation](https://rstudio.github.io/crosstalk/)
+
+CRAN [package details](https://CRAN.R-project.org/package=crosstalk )
+
+CRAN [reference manual](https://cran.r-project.org/web/packages/crosstalk/crosstalk.pdf)
+
+Repo on [GitHub](https://github.com/rstudio/crosstalk)
+
+]
+
+.pull-right[
+
+![Joe Cheng](https://avatars3.githubusercontent.com/u/129551?s=400&v=4)
+
+]
 
 ---
 class: center, middle
