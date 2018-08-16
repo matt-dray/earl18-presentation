@@ -1,66 +1,111 @@
+/* Title slide */
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+/* Links */
+
 a, a > code {
   color: #B97C7F;
   text-decoration: none;
 }
+
 .footnote {
   position: absolute;
   bottom: 3em;
   padding-right: 4em;
   font-size: 90%;
 }
-.remark-code-line-highlighted     { background-color: #ffff88; }
+
+.remark-code-line-highlighted {
+  background-color: #ffff88;
+}
+
+/* Inverse */
 
 .inverse {
   background-color: #104F75;
   color: #d6d6d6;
 }
+
 .inverse h1, .inverse h2, .inverse h3 {
   color: #f3f3f3;
 }
+
 /* Two-column layout */
+
 .left-column {
   color: #777;
   width: 20%;
   height: 92%;
   float: left;
 }
+
 .left-column h2:last-of-type, .left-column h3:last-child {
   color: #000;
 }
+
 .right-column {
   width: 75%;
   float: right;
   padding-top: 1em;
 }
+
 .pull-left {
   float: left;
   width: 47%;
 }
+
 .pull-right {
   float: right;
   width: 47%;
 }
+
 .pull-right ~ * {
   clear: both;
 }
+
+/* Images  */
+
 img, video, iframe {
   max-width: 100%;
 }
+
+.image-20 img {
+  width: 20%;
+}
+
 .image-100 img {
   width: 100%;
 }
+
+/* Quote */
+
 blockquote {
-  border-left: solid 5px lightgray;
+  border-left: solid 5px #104F75;
   padding-left: 1em;
 }
+
+/* Table */
+
 .remark-slide table {
   margin: auto;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
 }
-.remark-slide table thead th { border-bottom: 1px solid #ddd; }
+
+.remark-slide table thead th {
+  border-bottom: 1px solid #ddd;
+}
+
 th, td { padding: 5px; }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: #eee }
+
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+  background: #eee
+}
+
+/* Scaling  */
 
 @page { margin: 0; }
 @media print {

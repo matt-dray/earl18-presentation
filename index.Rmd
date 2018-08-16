@@ -30,15 +30,25 @@ Visualise school locations to help make a policy decision
 
 --
 
-quickly
+Quickly
 
 --
 
-cheaply
+Cheaply
 
 --
 
-shareable
+Shareable
+
+--
+
+.footnote[
+
+This content does not reflect official government policy
+
+Schools were chosen at random
+
+]
 
 ---
 class: inverse, center, middle
