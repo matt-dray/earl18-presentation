@@ -1,6 +1,6 @@
 ---
 title: "Crosstalk"
-subtitle: "Shiny-like without Shiny?"
+subtitle: "Shiny-like without Shiny"
 author: "Matt Dray | Dept for Education | EARL 2018"
 output:
   xaringan::moon_reader:
@@ -20,15 +20,13 @@ class: center, middle
 
 # TL;DR
 
-Crosstalk for small, lightweight, shareable apps
+Try [`crosstalk`](https://rstudio.github.io/crosstalk/) for interactivity without Shiny 
 
 ---
 
-class: center, middle
-
 # The ask
 
-visualise school locations to help make a policy decision
+Visualise school locations to help make a policy decision
 
 --
 
@@ -43,7 +41,6 @@ cheaply
 shareable
 
 ---
-
 class: inverse, center, middle
 
 # Solution 1
@@ -51,7 +48,6 @@ class: inverse, center, middle
 [`leaflet`](https://rstudio.github.io/leaflet/) interactive map
 
 ---
-
 class: center, middle
 
 .image-100[![](img/solution1-1.PNG)]
@@ -76,11 +72,9 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.ht
 
 interactive
 
-reproducible
+intuitive
 
 simple
-
-shareable
 
 ]
 
@@ -90,9 +84,7 @@ shareable
 
 ## &cross;
 
-separate documentation
-
-separate tabular data
+documentation?
 
 rendered in-browser
 
@@ -123,9 +115,7 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/02_leaflet-fl
 
 ## &check;
 
-map + documentation
-
-user-friendly
+documentation
 
 self-service
 
@@ -137,6 +127,10 @@ self-service
 
 ## &cross;
 
+tabular data?
+
+searchable?
+
 ]
 
 ---
@@ -152,7 +146,6 @@ with a [`DT`](https://rstudio.github.io/DT/) interactive table
 
 
 ---
-
 class: center, middle
 
 .image-100[![](img/solution3-1.PNG)]
@@ -160,7 +153,6 @@ class: center, middle
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-flexdash-dt.html)
 
 ---
-
 class: center, middle
 
 .image-100[![](img/solution3-2.PNG)]
@@ -171,15 +163,11 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-fl
 
 # Solution 3
 
-
 .pull-left[
 
 ## &check;
 
-
-map + documentation + tabular
-
-download data
+tabular data
 
 ]
 
@@ -189,102 +177,52 @@ download data
 
 ## &cross;
 
-data copies
+download?
+
+widget interactivity?
 
 ]
 
 ---
 class: inverse, center, middle
 
-# Solution 4
-
-[`leaflet`](https://rstudio.github.io/leaflet/) interactive map
-
-in a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/)
-
-with a [`DT`](https://rstudio.github.io/DT/) interactive table
-
-linked with [`crosstalk`](https://rstudio.github.io/crosstalk/)
+# What now?
 
 ---
 
-class: center, middle
-
-.image-100[![](img/solution4-1.PNG)]
-
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
-
----
-
-class: center, middle
-
-.image-100[![](img/solution4-2.PNG)]
-
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
-
----
-
-class: center, middle
-
-.image-100[![](img/solution4-3.PNG)]
-
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
-
----
-
-class: center, middle
-
-.image-100[![](img/solution4-4.PNG)]
-
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
-
----
-
-class: center, middle
-
-.image-100[![](img/solution4-5.PNG)]
-
-Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
-
----
-
-# Solution 4
+# Crosstalk by Joe Cheng
 
 .pull-left[
 
-## &check;
+Crosstalk achieves:
 
-one data source
-
-selections affect all widgets
-
-filtering
+> static HTML documents that <b>do not require Shiny</b> or any kind of server support and yet they can have <b>interactivity between widgets</b>
 
 ]
-
---
 
 .pull-right[
 
-## &cross;
-
-?
+![Joe Cheng](https://avatars3.githubusercontent.com/u/129551?s=400&v=4)
 
 ]
 
 ---
 
-class: inverse, center, middle
+# Model <em>without</em> Crosstalk
 
-# What's Crosstalk?
+.image-100[![](img/model-without.png)]
 
 ---
 
-class: center, middle
+# Model <em>with</em> Crosstalk
 
-> static html documents that do not require Shiny or any kind of server support and yet they can have interactivty between widgets 
+.image-100[![](img/model-with.png)]
 
-Make your widgets friends with each other!
+---
+
+# Model <em>with</em> Crosstalk
+
+.image-100[![](img/model-with-filter.png)]
 
 ---
 
@@ -318,7 +256,7 @@ leaflet(shared) %>% addTiles() %>% addMarkers()
 
 # Limitations
 
-1. Authors must modify HTML widgets
+1. HTML widgets must be made Crosstalk-compatible
 
 2. Aggregate and summary views not yet available 
 
@@ -330,28 +268,79 @@ leaflet(shared) %>% addTiles() %>% addMarkers()
 2. Right now only linked brushing and filtering of views that show individual data points, not aggregate or summary views.
 3. Depenedent on browser limitations.
 
+---
+class: inverse, center, middle
+
+# Okay, Solution 4
+
+[`leaflet`](https://rstudio.github.io/leaflet/) interactive map
+
+in a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/)
+
+with a [`DT`](https://rstudio.github.io/DT/) interactive table
+
+linked with [`crosstalk`](https://rstudio.github.io/crosstalk/)
+
+---
+class: center, middle
+
+.image-100[![](img/solution4-1.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
+---
+class: center, middle
+
+.image-100[![](img/solution4-2.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
+---
+class: center, middle
+
+.image-100[![](img/solution4-3.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
+---
+class: center, middle
+
+.image-100[![](img/solution4-4.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
+---
+class: center, middle
+
+.image-100[![](img/solution4-5.PNG)]
+
+Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
 
 ---
 
-# Resources
+# Solution 4
 
 .pull-left[
 
-Talk at [rstudio::conf 2017](https://www.rstudio.com/resources/videos/linking-html-widgets-with-crosstalk/)
+## &check;
 
-[Documentation](https://rstudio.github.io/crosstalk/)
+widgets linked
 
-CRAN [package details](https://CRAN.R-project.org/package=crosstalk )
+filtering and brushing
 
-CRAN [reference manual](https://cran.r-project.org/web/packages/crosstalk/crosstalk.pdf)
-
-Repo on [GitHub](https://github.com/rstudio/crosstalk)
+downloads
 
 ]
 
+--
+
 .pull-right[
 
-![Joe Cheng](https://avatars3.githubusercontent.com/u/129551?s=400&v=4)
+## &cross;
+
+More points!
+
+More widgets!
 
 ]
 
@@ -360,15 +349,51 @@ class: center, middle
 
 # TL;DR
 
-Insert TL;DR.
+Try [`crosstalk`](https://rstudio.github.io/crosstalk/) for interactivity without Shiny
 
 ---
 class: inverse, center, middle
 
-# Contact
-
-Matt Dray
+# Matt Dray
 
 [matthew.dray@education.gov.uk](mailto:matthew.dray@education.gov.uk)
 
 [rostrum.blog](https://rostrum.blog) | [twitter.com/mattdray](https://www.twitter.com/mattdray) | [github.com/matt-dray](https://www.github.com/matt-dray)
+
+---
+
+# Resources
+
+.pull-left[
+
+#### This presentation
+
+[Hosted online](https://matt-dray.github.io/earl18-presentation/)
+
+[GitHub repo](https://github.com/matt-dray/earl18-presentation)
+
+#### Demos
+
+Solutions [1](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.html), [2](https://matt-dray.github.io/earl18-crosstalk/02_leaflet-flexdash.html), [3](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-flexdash-dt.html) and [4](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
+[GitHub repo](https://github.com/matt-dray/earl18-crosstalk)
+
+]
+
+.pull-right[
+
+#### Crosstalk docs
+
+[Site](https://rstudio.github.io/crosstalk/) and [GitHub repo](https://github.com/rstudio/crosstalk)
+
+CRAN [manual](https://cran.r-project.org/web/packages/crosstalk/crosstalk.pdf) and [details](https://CRAN.R-project.org/package=crosstalk)
+
+Talk at [rstudio::conf 2017](https://www.rstudio.com/resources/videos/linking-html-widgets-with-crosstalk/)
+
+#### Examples
+
+[Gapminder example](http://rstudio-pubs-static.s3.amazonaws.com/209203_02f14fea3274448bbbf8d04c99c6051b.html)
+
+Demo [without](https://rpubs.com/jcheng/dash1) and [with](https://rpubs.com/jcheng/dash2) Crosstalk
+
+]
