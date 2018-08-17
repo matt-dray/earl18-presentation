@@ -19,24 +19,28 @@ options(htmltools.dir.version = FALSE)
 
 class: center, middle, inverse
 
-# Crosstalk
+# Crosstalk `r icon::fa("comments")`
 
-## Shiny-like without Shiny
-
-### Matt Dray | Dept for Education | #EARL2018
-
-<br>
+### Shiny-like without Shiny
 
 .image-30[![](img/earl_logo_light.png)]
+
+### Matt Dray | Dept for Education | #EARL2018
 
 ---
 class: center, middle
 
-<h1>TL;DR</h1>
+# TL;DR&ast;
 
 Need to create a small interactive app without a server or Shiny?
 
 Try the [`crosstalk`](http://rstudio.github.io/crosstalk/) package.
+
+.footnote[
+
+&ast;Too long; didn't read
+
+]
 
 ---
 class: center, middle
@@ -99,7 +103,7 @@ class: center, middle
 
 .pull-left[
 
-## &check;
+`r icon::fa("check", size = 2)`
 
 interactive
 
@@ -111,7 +115,7 @@ intuitive
 
 .pull-right[
 
-## &cross;
+`r icon::fa("times", size = 2)`
 
 documentation?
 
@@ -142,7 +146,7 @@ class: center, middle
 
 .pull-left[
 
-## &check;
+`r icon::fa("check", size = 2)`
 
 documentation
 
@@ -154,7 +158,7 @@ self-service
 
 .pull-right[
 
-## &cross;
+`r icon::fa("times", size = 2)`
 
 tabular data?
 
@@ -195,7 +199,7 @@ class: center, middle
 
 .pull-left[
 
-## &check;
+`r icon::fa("check", size = 2)`
 
 tabular data
 
@@ -205,7 +209,7 @@ tabular data
 
 .pull-right[
 
-## &cross;
+`r icon::fa("times", size = 2)`
 
 download?
 
@@ -288,7 +292,7 @@ leaflet(shared) %>% addTiles() %>% addMarkers()
 ---
 class: center, middle
 
-# Limitations
+# `r icon::fa("exclamation-triangle")` Limitations `r icon::fa("exclamation-triangle")`
 
 1 HTML widgets must be made Crosstalk-compatible
 
@@ -357,7 +361,7 @@ class: center, middle
 
 .pull-left[
 
-## &check;
+`r icon::fa("check", size = 2)`
 
 widgets linked
 
@@ -371,7 +375,7 @@ downloads
 
 .pull-right[
 
-## &cross;
+`r icon::fa("times", size = 2)`
 
 More points!
 
@@ -406,9 +410,9 @@ class: inverse, center, middle
 
 # Matt Dray
 
-[matthew.dray@education.gov.uk](mailto:matthew.dray@education.gov.uk)
+`r icon::fa("envelope")` [matthew.dray@education.gov.uk](mailto:matthew.dray@education.gov.uk)
 
-[rostrum.blog](https://rostrum.blog) | [twitter.com/mattdray](https://www.twitter.com/mattdray) | [github.com/matt-dray](https://www.github.com/matt-dray)
+`r icon::fa("globe")` [rostrum.blog](https://rostrum.blog) | `r icon::fa("twitter")` [twitter.com/mattdray](https://www.twitter.com/mattdray) | `r icon::fa("github")`  [github.com/matt-dray](https://www.github.com/matt-dray)
 
 ---
 

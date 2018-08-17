@@ -4,12 +4,6 @@
   display: none;
 }
 
-/* Headers  */
-
-h1 {
-    color: #104F75;
-}
-
 /* Links */
 
 a, a > code {
@@ -29,7 +23,7 @@ a, a > code {
   position: absolute;
   bottom: 3em;
   padding-right: 4em;
-  font-size: 90%;
+  font-size: 80%;
 }
 
 /* Inverse */
