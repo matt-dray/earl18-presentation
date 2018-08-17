@@ -1,11 +1,12 @@
 ---
-title: "Crosstalk"
+title: "Crosstalk #EARL18"
 subtitle: "Shiny-like without Shiny"
 author: "Matt Dray | Dept for Education | EARL 2018"
 output:
   xaringan::moon_reader:
     css: ["style/style.css", "style/style-fonts.css"]
     lib_dir: libs
+    seal: false
     nature:
       highlightStyle: github
       highlightLines: true
@@ -16,13 +17,38 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-class: center, middle
+class: center, middle, inverse
 
-# TL;DR
+# Crosstalk
 
-Try [`crosstalk`](https://rstudio.github.io/crosstalk/) for interactivity without Shiny 
+## Shiny-like without Shiny
+
+### Matt Dray | Dept for Education | #EARL2018
+
+<br>
+
+.image-30[![](img/earl_logo_light.png)]
 
 ---
+class: center, middle
+
+<h1>TL;DR</h1>
+
+Need to create a small interactive app without a server or Shiny?
+
+Try the [`crosstalk`](http://rstudio.github.io/crosstalk/) package.
+
+---
+class: center, middle
+
+# Am I talking about a real policy?
+
+Nope, sorry.
+
+All schools selected at random.
+
+---
+class: center, middle
 
 # The ask
 
@@ -40,15 +66,9 @@ Cheaply
 
 Shareable
 
---
+???
 
-.footnote[
-
-This content does not reflect official government policy
-
-Schools were chosen at random
-
-]
+area-based programmes operate all the time
 
 ---
 class: inverse, center, middle
@@ -73,6 +93,7 @@ class: center, middle
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.html)
 
 ---
+class: center, middle
 
 # Solution 1
 
@@ -83,8 +104,6 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.ht
 interactive
 
 intuitive
-
-simple
 
 ]
 
@@ -110,7 +129,6 @@ class: inverse, center, middle
 in a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/)
 
 ---
-
 class: center, middle
 
 .image-100[![](img/solution2.PNG)]
@@ -118,6 +136,7 @@ class: center, middle
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/02_leaflet-flexdash.html)
 
 ---
+class: center, middle
 
 # Solution 2
 
@@ -170,6 +189,7 @@ class: center, middle
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-flexdash-dt.html)
 
 ---
+class: center, middle
 
 # Solution 3
 
@@ -217,18 +237,21 @@ Crosstalk achieves:
 ]
 
 ---
+class: center, middle
 
 # Model <em>without</em> Crosstalk
 
 .image-100[![](img/model-without.png)]
 
 ---
+class: center, middle
 
 # Model <em>with</em> Crosstalk
 
 .image-100[![](img/model-with.png)]
 
 ---
+class: center, middle
 
 # Model <em>with</em> Crosstalk
 
@@ -263,14 +286,15 @@ leaflet(shared) %>% addTiles() %>% addMarkers()
 ```
 
 ---
+class: center, middle
 
 # Limitations
 
-1. HTML widgets must be made Crosstalk-compatible
+1 HTML widgets must be made Crosstalk-compatible
 
-2. Aggregate and summary views not yet available 
+2 Aggregate and summary views not yet available 
 
-3. Crosstalk is not appropriate for large data sets
+3 Crosstalk is not appropriate for large data sets
 
 ???
 
@@ -327,6 +351,7 @@ class: center, middle
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
 
 ---
+class: center, middle
 
 # Solution 4
 
@@ -357,9 +382,24 @@ More widgets!
 ---
 class: center, middle
 
+# Impact
+
+> the maps have been added to a submission for the minister
+
+<p>
+> policy and the external stakeholders have been extremely impressed 
+
+<p>
+> due to the positive feedback we are now using the same process for [another policy]
+
+---
+class: center, middle
+
 # TL;DR
 
-Try [`crosstalk`](https://rstudio.github.io/crosstalk/) for interactivity without Shiny
+Need to create a small interactive app without a server or Shiny?
+
+Try the [`crosstalk`](http://rstudio.github.io/crosstalk/) package.
 
 ---
 class: inverse, center, middle
