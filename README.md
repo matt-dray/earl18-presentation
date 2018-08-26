@@ -11,8 +11,9 @@ Note that this talk was restricted to **published data only** and the content of
 You can [view the presentation in your browser](https://matt-dray.github.io/earl18-presentation/). You should know about some [keyboard shortcuts](https://bookdown.org/yihui/rmarkdown/xaringan-key.html):
 
 * to present: use `c` to clone the window (for your audience) then `p` for presenter mode (in the window on your screen)
-* `b` to blackout
 * `f` for fullscreen
+* `t` to reset timer in presenter mode
+* `b` to blackout
 * `h` for more keyboard help
 
 ## Blurb
