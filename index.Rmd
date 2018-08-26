@@ -49,7 +49,13 @@ class: center, middle
 
 Nope, sorry.
 
-All schools selected at random.
+Schools in this example were chosen randomly.
+
+???
+
+The content of this talk does not reflect or constitute official government policy.
+
+The data are from published sources.
 
 ---
 class: center, middle
@@ -60,19 +66,33 @@ Visualise school locations to help make a policy decision
 
 --
 
-Quickly
-
---
-
-Cheaply
-
---
-
 Shareable
+
+--
+
+Cheap
+
+--
+
+Quick
+
+--
+
+(Reusable)
 
 ???
 
-area-based programmes operate all the time
+Area-based programmes operate at DfE all the time.
+
+Typically we produce static maps.
+
+ArcMap is not viable. We don't have the licenses.
+
+I iterated over four steps to produce something that my users wanted.
+
+(Or rather didn't even know they wanted.)
+
+And how the `crosstalk` package greatly improved the product.
 
 ---
 class: inverse, center, middle
@@ -88,6 +108,18 @@ class: center, middle
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.html)
 
+???
+
+Leaflet is an htmlwidget. It wraps a JavaScript visualisation in R code.
+
+There are other widgets: plotly, DT, etc (https://www.htmlwidgets.org/).
+
+This is a simple example. Each point is a school. You can conditionally change the colour or style of markers.
+
+The output here is HTML, so can be shared easily as a file via email and opened with the user's browser. 
+
+I've also hosted each of the examples in this presentation via GitHub. See the address bar or click the link.
+
 ---
 
 class: center, middle
@@ -95,6 +127,14 @@ class: center, middle
 .image-100[![](img/solution1-2.PNG)]
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.html)
+
+???
+
+It operated intuitively for our users, who were used to things like Google Maps.
+
+Pan, zoom, select markers to show pop-ups.
+
+You can add things like measuring tools, which is the function provided by the button in the top right.
 
 ---
 class: center, middle
@@ -119,8 +159,6 @@ intuitive
 
 documentation?
 
-rendered in-browser
-
 ]
 
 ---
@@ -139,6 +177,16 @@ class: center, middle
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/02_leaflet-flexdash.html)
 
+???
+
+Flexdashbaord allows you to build a framework using R Markdown where you put visualisations, commentary, etc.
+
+Typically you use this for creating dashboards. You can control the layout and style.
+
+So now we have space to put documentation for users (how to, purpose, contact info, etc).
+
+I've also added a source code button for fellow analysts to see and adapt the code.
+
 ---
 class: center, middle
 
@@ -154,6 +202,10 @@ self-service
 
 ]
 
+???
+
+'Self-service' meaning that we don't need to be in the room while users explore the data themselves.
+
 --
 
 .pull-right[
@@ -165,6 +217,14 @@ tabular data?
 searchable?
 
 ]
+
+???
+
+Users were pleased but still had some issues.
+
+How can we add more info into the pop-ups without overloading? Maybe some kind of table.
+
+How can they search for specific schools?
 
 ---
 class: inverse, center, middle
@@ -185,12 +245,20 @@ class: center, middle
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-flexdash-dt.html)
 
+???
+
+The DT package's `datatable` function is another htmlwidget that can provide more info about each school. 
+
 ---
 class: center, middle
 
 .image-100[![](img/solution3-2.PNG)]
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-flexdash-dt.html)
+
+???
+
+And you can use the built-in search or filter boxes to dig down.
 
 ---
 class: center, middle
@@ -203,6 +271,8 @@ class: center, middle
 
 tabular data
 
+searchable
+
 ]
 
 --
@@ -213,14 +283,69 @@ tabular data
 
 download?
 
-widget interactivity?
+linked table and map?
 
 ]
+
+???
+
+Great, but the users wanted to be able to export the filtered informatino rather than copy-pasting.
+
+Also - a good question - why doesn't filtering update the map too?
 
 ---
 class: inverse, center, middle
 
 # What now?
+
+???
+
+Do we have to resort to Shiny now?
+
+But this is problematic: we didn't have infrastructure to serve Shiny apps.
+
+Also we'd have to rewrite the code.
+
+And Shiny code is less intuitive for other analysts in my team versus the simplicity of R Markdown and htmlwidgets.
+
+---
+class: center, middle
+
+# Current model
+
+.image-100[![](img/model-without.png)]
+
+???
+
+Data feeds into map.
+
+Data feeds into datatable.
+
+Updating one htmlwidget doesn't update the other.
+
+---
+class: center, middle
+
+# Ideal model
+
+.image-100[![](img/model-with.png)]
+
+???
+
+What if the map and datatable could be linked through a _shared_ data object rather than relying on their own 'copies' of the data?
+
+---
+class: center, middle
+
+# Ideal model
+
+.image-100[![](img/model-with-filter.png)]
+
+???
+
+Of course, some bonus filtering options would be great: dropdowns, checkboxes and sliders maybe.
+
+Well, guess what?
 
 ---
 
@@ -240,26 +365,9 @@ Crosstalk achieves:
 
 ]
 
----
-class: center, middle
+???
 
-# Model <em>without</em> Crosstalk
-
-.image-100[![](img/model-without.png)]
-
----
-class: center, middle
-
-# Model <em>with</em> Crosstalk
-
-.image-100[![](img/model-with.png)]
-
----
-class: center, middle
-
-# Model <em>with</em> Crosstalk
-
-.image-100[![](img/model-with-filter.png)]
+This ideal model already exists!
 
 ---
 
@@ -268,11 +376,11 @@ class: center, middle
 #### Before
 
 ```{r eval=FALSE}
-data <- readRDS("data/some_data.RDS")
+data <- readRDS("data/some_data.RDS")  # get data
 
-datatable(data)
+datatable(data)  # interactive table
 
-leaflet(data) %>%  addTiles() %>% addMarkers()
+leaflet(data) %>% addTiles() %>% addMarkers()  # map
 ```
 
 --
@@ -289,20 +397,24 @@ datatable(shared)
 leaflet(shared) %>% addTiles() %>% addMarkers()
 ```
 
+???
+
+Do everything as usual, but create a 'shared data' object and refer to that in the htmlwidgets you want to talk to each other.
+
 ---
 class: center, middle
 
 # `r icon::fa("exclamation-triangle")` Limitations `r icon::fa("exclamation-triangle")`
 
-1 HTML widgets must be made Crosstalk-compatible
+htmlwidgets must be [made Crosstalk-compatible](http://rstudio.github.io/crosstalk/widgets.html)
 
-2 Aggregate and summary views not yet available 
+Aggregate and summary views not yet available 
 
-3 Crosstalk is not appropriate for large data sets
+You can't use 'large' datasets
 
 ???
 
-1. There is guidance for the tweak. 
+1. There is guidance for the tweak. `leaflet`, `DT`, `plotly` are fine for 95% of our purposes.
 2. Right now only linked brushing and filtering of views that show individual data points, not aggregate or summary views.
 3. Depenedent on browser limitations.
 
@@ -326,12 +438,20 @@ class: center, middle
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
 
+???
+
+Filters (dropdown, checkboxes, sliders), datatable (bonus buttons to download and select visible columns), map.
+
 ---
 class: center, middle
 
 .image-100[![](img/solution4-2.PNG)]
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
+???
+
+See how using the filters affect the table and the map?
 
 ---
 class: center, middle
@@ -340,6 +460,12 @@ class: center, middle
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
 
+???
+
+You can even click a row in the datatable to highlight it on the map.
+
+See how the others are made more transparent.
+
 ---
 class: center, middle
 
@@ -347,12 +473,24 @@ class: center, middle
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
 
+???
+
+You can filter the table to filter the map and vice versa.
+
+You can use 'linked brushing' to select from the map and filter the datatable.
+
+Select the button underneath the zoom options and a square appears that you can resize and drag over points of interest.
+
 ---
 class: center, middle
 
 .image-100[![](img/solution4-5.PNG)]
 
 Demo available [here](https://matt-dray.github.io/earl18-crosstalk/04_leaflet-flexdash-dt-crosstalk.html)
+
+???
+
+Where's the documentation? Moved to a separate tab.
 
 ---
 class: center, middle
@@ -363,7 +501,7 @@ class: center, middle
 
 `r icon::fa("check", size = 2)`
 
-widgets linked
+htmlwidgets linked
 
 filtering and brushing
 
@@ -377,9 +515,9 @@ downloads
 
 `r icon::fa("times", size = 2)`
 
-More points!
+more points!
 
-More widgets!
+more widgets!
 
 ]
 
@@ -406,15 +544,6 @@ Need to create a small interactive app without a server or Shiny?
 Try the [`crosstalk`](http://rstudio.github.io/crosstalk/) package.
 
 ---
-class: inverse, center, middle
-
-# Matt Dray
-
-`r icon::fa("envelope")` [matthew.dray@education.gov.uk](mailto:matthew.dray@education.gov.uk)
-
-`r icon::fa("globe")` [rostrum.blog](https://rostrum.blog) | `r icon::fa("twitter")` [twitter.com/mattdray](https://www.twitter.com/mattdray) | `r icon::fa("github")`  [github.com/matt-dray](https://www.github.com/matt-dray)
-
----
 
 # Resources
 
@@ -425,6 +554,8 @@ class: inverse, center, middle
 [Hosted online](https://matt-dray.github.io/earl18-presentation/)
 
 [GitHub repo](https://github.com/matt-dray/earl18-presentation)
+
+Made with Yihui Xie's [Xaringan package](https://bookdown.org/yihui/rmarkdown/xaringan.html)
 
 #### Demos
 
@@ -451,3 +582,12 @@ Talk at [rstudio::conf 2017](https://www.rstudio.com/resources/videos/linking-ht
 Demo [without](https://rpubs.com/jcheng/dash1) and [with](https://rpubs.com/jcheng/dash2) Crosstalk
 
 ]
+
+---
+class: inverse, center, middle
+
+# Matt Dray
+
+`r icon::fa("envelope")` [matthew.dray@education.gov.uk](mailto:matthew.dray@education.gov.uk)
+
+`r icon::fa("globe")` [rostrum.blog](https://rostrum.blog) | `r icon::fa("twitter")` [twitter.com/mattdray](https://www.twitter.com/mattdray) | `r icon::fa("github")`  [github.com/matt-dray](https://www.github.com/matt-dray)
