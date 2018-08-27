@@ -373,15 +373,15 @@ Well, guess what?
 
 .pull-left[
 
-Crosstalk achieves:
-
-> static HTML documents that <b>do not require Shiny</b> or any kind of server support and yet they can have <b>interactivity between widgets</b>
+![Joe Cheng](https://avatars3.githubusercontent.com/u/129551?s=400&v=4)
 
 ]
 
 .pull-right[
 
-![Joe Cheng](https://avatars3.githubusercontent.com/u/129551?s=400&v=4)
+You can make:
+
+> static HTML documents that <b>do not require Shiny</b> or any kind of server support and yet they can have <b>interactivity between widgets</b>
 
 ]
 
@@ -553,13 +553,27 @@ class: center, middle
 
 # Impact
 
+.pull-left[
+
 > the maps have been added to a submission for the minister
 
 <p>
+
 > policy and the external stakeholders have been extremely impressed 
 
 <p>
+
 > due to the positive feedback we are now using the same process for [another policy]
+
+]
+
+.pull-right[
+
+<br>
+
+`r icon::fa("thumbs-up", size = 5)`
+
+]
 
 ---
 class: center, middle
