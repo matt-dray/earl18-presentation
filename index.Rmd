@@ -96,7 +96,7 @@ Quick
 
 --
 
-(Reusable)
+Reusable
 
 ???
 
@@ -173,9 +173,9 @@ intuitive
 
 .pull-right[
 
-`r icon::fa("times", size = 2)`
+`r icon::fa("arrow-right", size = 2)`
 
-documentation?
+documentation
 
 ]
 
@@ -228,11 +228,11 @@ self-service
 
 .pull-right[
 
-`r icon::fa("times", size = 2)`
+`r icon::fa("arrow-right", size = 2)`
 
-tabular data?
+tabular data
 
-searchable?
+searchable
 
 ]
 
@@ -297,17 +297,17 @@ searchable
 
 .pull-right[
 
-`r icon::fa("times", size = 2)`
+`r icon::fa("arrow-right", size = 2)`
 
-download?
+download option
 
-linked table and map?
+linked table and map
 
 ]
 
 ???
 
-Great, but the users wanted to be able to export the filtered informatino rather than copy-pasting.
+Great, but the users wanted to be able to export the filtered information rather than copy-pasting.
 
 Also - a good question - why doesn't filtering update the map too?
 
@@ -363,7 +363,7 @@ class: center, middle
 
 Of course, some bonus filtering options would be great: dropdowns, checkboxes and sliders maybe.
 
-Almost as if the widgets and filters were *talking across* .
+So it's like we want the widgets to *talk across* the divide - to *crosstalk* if you will.
 
 Well, guess what?
 
@@ -517,29 +517,36 @@ class: center, middle
 
 # Solution 4
 
-.pull-left[
-
 `r icon::fa("check", size = 2)`
 
-htmlwidgets linked
+map and table linked
 
-filtering and brushing
+data filtering and brushing
 
 downloads
 
-]
+---
+class: center, middle
+
+# The ask
+
+Visualise school locations to help make a policy decision `r icon::fa("check")`
 
 --
 
-.pull-right[
+Shareable `r icon::fa("check")`
 
-`r icon::fa("times", size = 2)`
+--
 
-more points!
+Cheap `r icon::fa("check")`
 
-more widgets!
+--
 
-]
+Quick `r icon::fa("check")`
+
+--
+
+Reusable `r icon::fa("check")`
 
 ---
 class: center, middle
