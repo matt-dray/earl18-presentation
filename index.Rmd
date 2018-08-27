@@ -27,6 +27,20 @@ class: center, middle, inverse
 
 ### Matt Dray | Dept for Education | #EARL2018
 
+???
+
+Shiny is a popular topic at EARL and it solves lots of business problems.
+
+Let's say you're building a small app or doing a mock-up but your infrastructure is limited, or you simply don't need the full extent of Shiny? What other R-based options are there? 
+
+I'm going to talk about one option for doing this.
+
+Hands up if you've used Shiny.
+
+Hands up if you've heard of Crosstalk before.
+
+Hands up if you've used Crosstalk before.
+
 ---
 class: center, middle
 
@@ -41,6 +55,10 @@ Try the [`crosstalk`](http://rstudio.github.io/crosstalk/) package.
 &ast;Too long; didn't read
 
 ]
+
+???
+
+If you're already bored, then just note down this TL;DR. You can go to sleep now.
 
 ---
 class: center, middle
@@ -344,6 +362,8 @@ class: center, middle
 ???
 
 Of course, some bonus filtering options would be great: dropdowns, checkboxes and sliders maybe.
+
+Almost as if the widgets and filters were *talking across* .
 
 Well, guess what?
 
