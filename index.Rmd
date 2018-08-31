@@ -128,7 +128,7 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.ht
 
 ???
 
-Leaflet is an htmlwidget. It wraps a JavaScript visualisation in R code.
+Leaflet is an HTML widget. It wraps a JavaScript visualisation in R code.
 
 There are other widgets: plotly, DT, etc (https://www.htmlwidgets.org/).
 
@@ -324,7 +324,7 @@ But this is problematic: we didn't have infrastructure to serve Shiny apps.
 
 Also we'd have to rewrite the code.
 
-And Shiny code is less intuitive for other analysts in my team versus the simplicity of R Markdown and htmlwidgets.
+And Shiny code is less intuitive for other analysts in my team versus the simplicity of R Markdown and HTML widgets.
 
 ---
 class: center, middle
@@ -419,14 +419,14 @@ leaflet(shared) %>% addTiles() %>% addMarkers()
 
 ???
 
-Do everything as usual, but create a 'shared data' object and refer to that in the htmlwidgets you want to talk to each other.
+Do everything as usual, but create a 'shared data' object and refer to that in the HTML widgets you want to talk to each other.
 
 ---
 class: center, middle
 
 # `r icon::fa("exclamation-triangle")` Limitations `r icon::fa("exclamation-triangle")`
 
-htmlwidgets must be [made Crosstalk-compatible](http://rstudio.github.io/crosstalk/widgets.html)
+HTML widgets must be [made Crosstalk-compatible](http://rstudio.github.io/crosstalk/widgets.html)
 
 Aggregate and summary views not yet available 
 
