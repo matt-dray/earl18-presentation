@@ -26,17 +26,19 @@ class: center, middle, inverse
 
 ???
 
-Shiny is a popular topic at EARL and it solves lots of business problems.
+Matt Dray, Data Science, DfE, ACQ; soon GDS.
 
-Let's say you're building a small app or doing a mock-up but your infrastructure is limited, or you simply don't need the full extent of Shiny? What other R-based options are there? 
+I'm being provactive with the title. Shiny is a popular topic at EARL and it solves lots of business problems.
 
-I'm going to talk about one option for doing this.
+But what if you don't have the infrastructure or skills?
 
-Hands up if you've used Shiny.
+I'm going to talk through one option -- the `crosstalk` package -- that you may not be aware of.
 
-Hands up if you've heard of Crosstalk before.
+First, hands up if you've:
 
-Hands up if you've used Crosstalk before.
+* used Shiny
+* heard of Crosstalk
+* used Crosstalk
 
 ---
 class: center, middle
@@ -55,7 +57,11 @@ Try the [`crosstalk`](http://rstudio.github.io/crosstalk/) package.
 
 ???
 
-If you're already bored, then just note down this TL;DR. You can go to sleep now.
+I'm starting with a spoiler alert.
+
+If you're already bored, then just note down this TL;DR.
+
+You can go to sleep now.
 
 ---
 class: center, middle
@@ -68,9 +74,11 @@ Schools in this example were chosen randomly.
 
 ???
 
-The content of this talk does not reflect or constitute official government policy.
+DfE has lots of high-priority policies.
 
-The data are from published sources.
+The content of this talk does not reflect or constitute any official government policy.
+
+Today I'm using randomly-selected schools and published data.
 
 ---
 class: center, middle
@@ -78,6 +86,23 @@ class: center, middle
 # The ask
 
 Visualise school locations to help make a policy decision
+
+???
+
+Show points on a map, basically. DfE has many area-based policies and does this a lot.
+
+Static maps are produced for this typically. Opportunity: produce something interactive.
+
+User needs:
+
+* Shareable: how can I make it interactive *and* shareable?
+* Cheap: how can I make most of the resources I have? (i.e. not ArcMap)
+* Quick: this was a last-minute ask
+* Reusable: if successful, we should be able to use it again
+
+I iterated over four steps to produce something that my users wanted.
+
+New requirements emerged with each iteration.
 
 --
 
@@ -95,19 +120,6 @@ Quick
 
 Reusable
 
-???
-
-Area-based programmes operate at DfE all the time.
-
-Typically we produce static maps.
-
-ArcMap is not viable. We don't have the licenses.
-
-I iterated over four steps to produce something that my users wanted.
-
-(Or rather didn't even know they wanted.)
-
-And how the `crosstalk` package greatly improved the product.
 
 ---
 class: inverse, center, middle
@@ -115,6 +127,16 @@ class: inverse, center, middle
 # Solution 1
 
 [`leaflet`](https://rstudio.github.io/leaflet/) interactive map
+
+???
+
+R isn't zero-indexed, so we'll start with *Solution 1* rather than *Solution 0* (pause for thunderous laughter).
+
+The first solution was to use the go-to interactive map package for R: `leaflet`.
+
+`leaflet` is an *HTML widget*. It wraps the Leaflet JavaScript visualisation library into R code.
+
+Find out about other widgets at [htmlwidgets.org](https://www.htmlwidgets.org/).
 
 ---
 class: center, middle
@@ -125,11 +147,9 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.ht
 
 ???
 
-Leaflet is an HTML widget. It wraps a JavaScript visualisation in R code.
+This is a simple example. Each point is a school.
 
-There are other widgets: plotly, DT, etc (https://www.htmlwidgets.org/).
-
-This is a simple example. Each point is a school. You can conditionally change the colour or style of markers.
+You can do basic stuff like conditionally change the colour or style of markers.
 
 The output here is HTML, so can be shared easily as a file via email and opened with the user's browser. 
 
@@ -145,7 +165,7 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/01_leaflet.ht
 
 ???
 
-It operated intuitively for our users, who were used to things like Google Maps.
+Our users were used to things like Google Maps, so Leaflet was intuitive.
 
 Pan, zoom, select markers to show pop-ups.
 
@@ -185,6 +205,12 @@ class: inverse, center, middle
 
 in a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/)
 
+???
+
+The `flexdashboard` package allows you to build business dashboards using R Markdown.
+
+We can repurpose it to create a scaffold to hold visualisations, commentary, etc.
+
 ---
 class: center, middle
 
@@ -194,13 +220,9 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/02_leaflet-fl
 
 ???
 
-Flexdashbaord allows you to build a framework using R Markdown where you put visualisations, commentary, etc.
-
-Typically you use this for creating dashboards. You can control the layout and style.
-
 So now we have space to put documentation for users (how to, purpose, contact info, etc).
 
-I've also added a source code button for fellow analysts to see and adapt the code.
+I've also added a source code button in the upper right for fellow analysts to see and adapt the code.
 
 ---
 class: center, middle
@@ -252,6 +274,9 @@ in a [`flexdashboard`](https://rmarkdown.rstudio.com/flexdashboard/)
 
 with a [`DT`](https://rstudio.github.io/DT/) interactive table
 
+???
+
+`DT` is another HTML widget. It allows you to create interactive tables with its `datatable()` function.
 
 ---
 class: center, middle
@@ -262,7 +287,9 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-fl
 
 ???
 
-The DT package's `datatable` function is another htmlwidget that can provide more info about each school. 
+I adapted the Flexdashboard layout to hold the datatable in the lower-left.
+
+But what makes this different from a regular non-interactive table?
 
 ---
 class: center, middle
@@ -273,7 +300,13 @@ Demo available [here](https://matt-dray.github.io/earl18-crosstalk/03_leaflet-fl
 
 ???
 
-And you can use the built-in search or filter boxes to dig down.
+The main addition is built-in search and filter boxes.
+
+Here I've filtered for school names containing the string 'st john'.
+
+You can filter any of the columns in the table, or use the search box.
+
+See how the number of rows is smaller?
 
 ---
 class: center, middle
@@ -306,7 +339,7 @@ linked table and map
 
 Great, but the users wanted to be able to export the filtered information rather than copy-pasting.
 
-Also - a good question - why doesn't filtering update the map too?
+Also why doesn't filtering update the map too? That would be much more useful.
 
 ---
 class: inverse, center, middle
@@ -336,7 +369,7 @@ Data feeds into map.
 
 Data feeds into datatable.
 
-Updating one htmlwidget doesn't update the other.
+Updating one HTML widget doesn't update the other.
 
 ---
 class: center, middle
@@ -347,7 +380,7 @@ class: center, middle
 
 ???
 
-What if the map and datatable could be linked through a _shared_ data object rather than relying on their own 'copies' of the data?
+What if the widgets could be linked through a *shared* data object rather than relying on their own 'copies' of the data?
 
 ---
 class: center, middle
@@ -360,7 +393,7 @@ class: center, middle
 
 Of course, some bonus filtering options would be great: dropdowns, checkboxes and sliders maybe.
 
-So it's like we want the widgets to *talk across* the divide - to *crosstalk* if you will.
+So it's like we want the widgets to *talk across* the divide -- to *crosstalk* if you will.
 
 Well, guess what?
 
@@ -531,6 +564,13 @@ class: center, middle
 
 Visualise school locations to help make a policy decision <i class="fas  fa-check "></i>
 
+???
+
+* Shareable: HTML attached to an email
+* Cheap: R is free, resource was minimal in terms of analyst time
+* Quick: iterated rapidly through each stage with little code required overall (&lt;250 lines)
+* Reusable: little code, code available within app, 'plug and play' shared data
+
 --
 
 Shareable <i class="fas  fa-check "></i>
@@ -573,6 +613,10 @@ class: center, middle
 <i class="fas  fa-thumbs-up fa-5x "></i>
 
 ]
+
+??? 
+
+Quotes from emails.
 
 ---
 class: center, middle
