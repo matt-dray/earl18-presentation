@@ -14,6 +14,12 @@
 
 ![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/american-chopper-argument.jpg?raw=true)
 
+
+3. Trump order ([twitter](https://twitter.com/mattdray/status/1038306444045639680)/[imgflip](https://imgflip.com/i/2hgftk))
+
+![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/trump.jpg?raw=true)
+
+
 ## Hot to drop
 
 * [distracted boyfriend](https://imgflip.com/i/2h8ie1)
