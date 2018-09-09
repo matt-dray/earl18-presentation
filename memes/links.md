@@ -15,9 +15,17 @@
 ![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/american-chopper-argument.jpg?raw=true)
 
 
-3. Trump order ([twitter](https://twitter.com/mattdray/status/1038306444045639680)/[imgflip](https://imgflip.com/i/2hgftk))
+4. Trump order ([twitter](https://twitter.com/mattdray/status/1038306444045639680)/[imgflip](https://imgflip.com/i/2hgftk))
 
 ![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/trump.jpg?raw=true)
+
+5a. Cat trace ([twitter](https://twitter.com/mattdray/status/1038727929998598145)/[imgflip](https://imgflip.com/i/2heju0))
+
+![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/trace-cat.jpg?raw=true)
+
+5b. Car salesman ([twitter](https://twitter.com/mattdray/status/1038727929998598145)/[imgflip](https://imgflip.com/i/2hejnv))
+
+![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/bad-boy.jpg?raw=true)
 
 
 ## Hot to drop
@@ -28,5 +36,3 @@
 * [expanding brain](https://imgflip.com/i/2h8il2)
 * [who would win](https://imgflip.com/i/2h8j5l)
 * [doge](https://imgflip.com/i/2h8j9t)
-* [trace cat](https://imgflip.com/i/2heju0)
-* [slaps roof](https://imgflip.com/i/2hejnv)
