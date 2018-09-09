@@ -455,6 +455,8 @@ leaflet(shared) %>% addTiles() %>% addMarkers()
 
 Do everything as usual, but create a 'shared data' object and refer to that in the HTML widgets you want to talk to each other.
 
+You can create more than one shared data object. So [plotly + datatable 1] could share separate data to [leaflet + datatable 2].
+
 ---
 class: center, middle
 
