@@ -8,6 +8,7 @@ output:
     lib_dir: libs
     seal: false
     nature:
+      slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -679,3 +680,54 @@ class: inverse, center, middle
 `r icon::fa("envelope")` [matthew.dray@education.gov.uk](mailto:matthew.dray@education.gov.uk)
 
 `r icon::fa("globe")` [rostrum.blog](https://rostrum.blog) | `r icon::fa("twitter")` [twitter.com/mattdray](https://www.twitter.com/mattdray) | `r icon::fa("github")`  [github.com/matt-dray](https://www.github.com/matt-dray)
+
+
+---
+class: inverse, center, middle
+
+# `r icon::fa("star")` BONUS MEMES `r icon::fa("star")`
+
+---
+class: center, middle
+
+![](memes/scroll-of-truth.jpg)
+
+---
+class: center, middle
+
+![](memes/is-this.jpg)
+
+---
+class: center, middle
+
+.pull-left[
+![](memes/american-chopper-argument-left.jpg)
+]
+
+.pull-right[
+![](memes/american-chopper-argument-right.jpg)
+]
+---
+class: center, middle
+
+![](memes/trump.jpg)
+
+---
+class: center, middle
+
+.pull-left[
+![](memes/trace-cat-left.jpg)
+<br>
+<br>
+]
+
+.pull-right[
+<br>
+<br>
+![](memes/trace-cat-right.jpg)
+]
+
+---
+class: center, middle
+
+![](memes/bad-boy.jpg)
