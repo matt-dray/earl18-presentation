@@ -8,9 +8,11 @@ The presentation was about use of [the `crosstalk` package](http://rstudio.githu
 
 Note that this talk was restricted to **published data only** and the content of this talk **does not reflect or constitute official government policy**.
 
-You can [view the presentation in your browser](https://matt-dray.github.io/earl18-presentation/). You should know about some [keyboard shortcuts](https://bookdown.org/yihui/rmarkdown/xaringan-key.html):
+You can [view the presentation in your browser](https://matt-dray.github.io/earl18-presentation/).
 
-* to present: use `c` to clone the window (for your audience) then `p` for presenter mode (in the window on your screen)
+The presentation was built using [the excellent `xaringan` package](https://bookdown.org/yihui/rmarkdown/xaringan.html). You should know about some [keyboard shortcuts](https://bookdown.org/yihui/rmarkdown/xaringan-key.html):
+
+* to present: use `c` to clone the window (for your audience) then `p` for presenter mode (in the window on your own screen)
 * `f` for fullscreen
 * `t` to reset timer in presenter mode
 * `b` to blackout
