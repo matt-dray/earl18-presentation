@@ -14,10 +14,13 @@
 
 ![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/american-chopper-argument.jpg?raw=true)
 
-
-4. Trump order ([twitter](https://twitter.com/mattdray/status/1038306444045639680)/[imgflip](https://imgflip.com/i/2hgftk))
+4a. Trump order ([twitter](https://twitter.com/mattdray/status/1038306444045639680)/[imgflip](https://imgflip.com/i/2hgftk))
 
 ![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/trump.jpg?raw=true)
+
+4b. #MSSSAGG ([twitter](https://twitter.com/mattdray/status/1038737035379585024)/[imgflip](https://imgflip.com/i/2hjlg0))
+
+![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/msssagg.jpg?raw=true)
 
 5a. Cat trace ([twitter](https://twitter.com/mattdray/status/1038727929998598145)/[imgflip](https://imgflip.com/i/2heju0))
 
