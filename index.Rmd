@@ -467,9 +467,15 @@ You can't use 'large' datasets
 
 ???
 
-1. There is guidance for the tweak. `leaflet`, `DT`, `plotly` are fine for 95% of our purposes.
+The title of the talk says *Shiny-like*. Crosstalk is useful in a narrow set of cases.
+
+1. There's [guidance for the tweak](http://rstudio.github.io/crosstalk/authoring.html). `leaflet`, `DT`, `plotly` are fine for 95% of our purposes.
 2. Right now only linked brushing and filtering of views that show individual data points, not aggregate or summary views.
 3. Depenedent on browser limitations.
+
+Having said that:
+
+> You can use Crosstalk and Shiny together, and when you do so, you broaden the capabilities of Crosstalk by allowing your brushing and filtering to drive arbitrary calculations and Shiny outputs (and vice versa).
 
 ---
 class: inverse, center, middle
@@ -615,9 +621,6 @@ class: center, middle
 
 ]
 
-??? 
-
-Quotes from emails.
 
 ---
 class: center, middle
