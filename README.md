@@ -10,7 +10,11 @@ Note that this talk was restricted to **published data only** and the content of
 
 You can [view the presentation in your browser](https://matt-dray.github.io/earl18-presentation/).
 
-The presentation was built using [the excellent `xaringan` package](https://bookdown.org/yihui/rmarkdown/xaringan.html). You should know about some [keyboard shortcuts](https://bookdown.org/yihui/rmarkdown/xaringan-key.html):
+## Xaringan
+
+The presentation was built using [the excellent `xaringan` package](https://bookdown.org/yihui/rmarkdown/xaringan.html).
+
+You should know about some [keyboard shortcuts](https://bookdown.org/yihui/rmarkdown/xaringan-key.html):
 
 * to present: use `c` to clone the window (for your audience) then `p` for presenter mode (in the window on your own screen)
 * `f` for fullscreen
@@ -19,6 +23,8 @@ The presentation was built using [the excellent `xaringan` package](https://book
 * `h` for more keyboard help
 
 ## Blurb
+
+[The blurb is available on the EARL website](https://earlconf.com/2018/london/#matt-dray).
 
 >Crosstalk: Shiny-like without Shiny
 >
