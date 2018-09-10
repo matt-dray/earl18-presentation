@@ -30,6 +30,9 @@
 
 ![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/bad-boy.jpg?raw=true)
 
+6. Swerve ([twitter](https://twitter.com/mattdray/status/1039034098214416384)/[imgflip](https://imgflip.com/i/2hlhvx))
+
+![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/swerve.jpg?raw=true)
 
 ## Hot to drop
 
