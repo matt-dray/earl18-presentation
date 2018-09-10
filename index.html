@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="author" content="Matt Dray | Dept for Education | EARL 2018" />
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style\style.css" type="text/css" />
-    <link rel="stylesheet" href="style\style-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+    <link rel="stylesheet" href="style/style-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -434,6 +434,17 @@ datatable(data)  # interactive table
 leaflet(data) %&gt;% addTiles() %&gt;% addMarkers()  # map
 ```
 
+???
+
+* Before: non-linked.
+* After: one line of code is all you need.
+
+Keeping it simple: the data should be dataframe and have some kind of *key* (row number is okay). You can have multiple *groups* of shared data.
+
+This is the only slide with code.
+
+I don't want to get into the technical details here. You can look these up on the Crosstalk guidance linked at the end.
+
 --
 
 #### After
@@ -448,12 +459,6 @@ datatable(shared)
 
 leaflet(shared) %&gt;% addTiles() %&gt;% addMarkers()
 ```
-
-???
-
-Do everything as usual, but create a 'shared data' object and refer to that in the HTML widgets you want to talk to each other.
-
-You can create more than one shared data object. So [plotly + datatable 1] could share separate data to [leaflet + datatable 2].
 
 ---
 class: center, middle
