@@ -733,3 +733,8 @@ class: center, middle
 class: center, middle
 
 ![](memes/bad-boy.jpg)
+
+---
+class: center, middle
+
+![](memes/swerve.jpg)
