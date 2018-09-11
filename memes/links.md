@@ -34,7 +34,12 @@
 
 ![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/swerve.jpg?raw=true)
 
-## Hot to drop
+
+6. Arms ([twitter](https://twitter.com/mattdray/status/1039395576352329729)/[imgflip](https://imgflip.com/i/2ho5tb))
+
+![](https://github.com/matt-dray/earl18-presentation/blob/master/memes/arms.jpg?raw=true)
+
+## Bonus content
 
 * [distracted boyfriend](https://imgflip.com/i/2h8ie1)
 * [two buttons](https://imgflip.com/i/2h8igb)
