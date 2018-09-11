@@ -745,3 +745,8 @@ class: center, middle
 class: center, middle
 
 ![](memes/swerve.jpg)
+
+---
+class: center, middle
+
+![](memes/arms.jpg)
