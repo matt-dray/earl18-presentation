@@ -5,6 +5,7 @@
 * [View the presentation in your browser](https://matt-dray.github.io/earl18-presentation/)
 * [Access the code for reproducing the demos in my talk](https://github.com/matt-dray/earl18-crosstalk)
 * [Blog post about this presentation](https://www.rostrum.blog/2018/09/12/crosstalk-memes/)
+* [I did an 'advent of memes' on Twitter leading up to the talk; I know that's why you're really here](https://github.com/matt-dray/earl18-presentation/blob/master/memes/links.md)
 
 ## Summary
 
