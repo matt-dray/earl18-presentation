@@ -10,7 +10,7 @@
 
 This repo contains source code for a presentation I gave at the [EARL (Enterprise Applications of the R Language) conference](https://earlconf.com/) in London on 12 September 2018.
 
-The presentation was about use of [the `crosstalk` package](http://rstudio.github.io/crosstalk/) to help solve a business problem.
+The presentation was about use of [Joe Cheng](https://twitter.com/jcheng)'s [`crosstalk` package](http://rstudio.github.io/crosstalk/) to help solve a business problem. `crosstalk` lets you create [Shiny](https://shiny.rstudio.com/)-like 'apps' without Shiny. You might want to do this because you don't have a server to host a Shiny app. It lets filtering of one `crosstalk`-compatible [htmlwidget](https://www.htmlwidgets.org/) (e.g. `leaflet`, `DT` and `plotly`) filter other `crosstalk`-compatible htmlwidgets.
 
 I gave this talk while I worked for the [Department for Education](https://www.gov.uk/government/organisations/department-for-education), part of the UK government. My talk was restricted to **published data only** and the content of the talk **does not reflect or constitute official government policy**. Schools were selected **at random** from open data.
 
